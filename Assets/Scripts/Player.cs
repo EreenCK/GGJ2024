@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject limon;
-    public GameObject þiþe;
-    public GameObject kitap;
-    public GameObject balik;
-    public Camera playerCamera; 
+   
+    public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
     public float gravity = 10f;
-    
+
 
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
@@ -21,8 +18,6 @@ public class Player : MonoBehaviour
     [Header("UI")]
     public GameObject etkilesim;
     public GameObject konusma;
-    public GameObject QuestionLog;
-    private bool question = false;
 
 
     Vector3 moveDirection = Vector3.zero;
@@ -84,17 +79,8 @@ public class Player : MonoBehaviour
         }
 
         #endregion
-
-        if (Input.GetKeyDown(KeyCode.Q) && !question)
-        {
-            QuestionLog.SetActive(true);
-            question = true;
-        }
-        else if(Input.GetKeyDown(KeyCode.Q) && question)
-        {
-            QuestionLog.SetActive(false);
-            question = false;
-        }
+       
+        
 
 
 
@@ -127,32 +113,6 @@ public class Player : MonoBehaviour
            
         }
     }
-    public void limonObjeac()
-    {
-        limon.SetActive(true);
-    }
-    public void limonObjekapa( )
-    {
-        limon.SetActive(false);
-    }
-    public void þiþeObjeac( )
-    {
-        þiþe.SetActive(true);
-    }
-    public void þiþeObjekapa( )
-    {
-        þiþe.SetActive(false);
-    }
-    public void kitapObjeac()
-    {
-        kitap.SetActive(true);
-    }
-    public void balikObjeac()
-    {
-        balik.SetActive(true);
-    }
-    
 }
-
 
 
